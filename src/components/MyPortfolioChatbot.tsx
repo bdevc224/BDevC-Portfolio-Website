@@ -61,20 +61,13 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
     },
     {
       id: 2,
-      name: "Love Triangle",
+      name: "Car Dealer's Portfolio",
       img: "/projects/portfolio.png",
       description:
-        "A responsive love calculator built with React and Tailwind showcasing frontend skills and animations.",
+        "A unique and responsive car dealer's portfolio website, built with React and Tailwind showcasing frontend genuineness, simplicity and creativity.",
       link: "/lovetriangle",
     },
-    {
-      id: 3,
-      name: "Truth or Dare",
-      img: "/projects/ecommerce.png",
-      description:
-        "A full truth or dare customizable gaming site built with React and Tailwind CSS.",
-      link: "/truthordareapp",
-    },
+    
   ];
 
   useEffect(() => {
