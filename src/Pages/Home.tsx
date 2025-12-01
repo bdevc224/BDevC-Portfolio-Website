@@ -83,14 +83,14 @@ function Hero() {
           <div className="text-start flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 py-8 sm:py-12">
             <DirectionAwareLink 
               to="/hireme" 
-              className="font-body font-bold border-2 border-red-500 text-base sm:text-lg text-red-500 px-4 sm:px-6 py-3 sm:py-4 w-full sm:w-56 text-center rounded-lg shadow-lg shadow-red-500/50 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
+              className="font-body font-bold border-2 border-red-500 text-base sm:text-lg text-red-500 px-4 sm:px-6 py-3 sm:py-4 w-2xs sm:w-56 text-center rounded-lg shadow-lg shadow-red-500/50 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
             >
               Hire Me
             </DirectionAwareLink>
 
             <DirectionAwareLink 
               to="/myprojects" 
-              className="font-body font-bold border-2 border-red-500 text-base sm:text-lg text-red-500 px-4 sm:px-6 py-3 sm:py-4 w-full sm:w-56 text-center rounded-lg shadow-lg shadow-red-500/50 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
+              className="font-body font-bold border-2 border-red-500 text-base sm:text-lg text-red-500 px-4 sm:px-6 py-3 sm:py-4 w-2xs sm:w-56 text-center rounded-lg shadow-lg shadow-red-500/50 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
             >
               My Projects
             </DirectionAwareLink>
