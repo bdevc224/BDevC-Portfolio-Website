@@ -4,7 +4,7 @@ import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import FadeInWhenVisibleRight from "../components/FadeInWhenVisibleRight";
 import FadeInWhenVisibleLeft from "../components/FadeInWhenVisibleLeft";
 import Footer from "../components/Footer";
-import { ExternalLink, Github, Play } from "lucide-react";
+import { ExternalLink, Github, Play, Code, Star } from "lucide-react";
 
 // Define the type based on what ZoomPortal expects
 type ProjectType = "image" | "video" | "text";
@@ -15,6 +15,7 @@ interface Project {
     type: ProjectType;
     src: string;
     link: string;
+    github: string; // GitHub repository link
     tech: string[];
     color: string;
     shadow: string;
@@ -49,7 +50,7 @@ function HeaderSection() {
                         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center mx-auto">
                             <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
                         </div>
-                        <p className="text-white text-sm mt-2 opacity-80">Explore my work</p>
+                        <p className="text-white text-sm mt-2 opacity-80">Explore my code & projects</p>
                     </div>
                 </FadeInWhenVisible>
             </div>
@@ -65,6 +66,7 @@ function BodySection() {
             type: "video",
             src: "/VIDEOS/my-website.MOV",
             link: "https://my-react-tailwind-landing-page.netlify.app/",
+            github: "https://github.com/bdevc224/my-react-tailwind-project", // Add your GitHub link
             tech: ["React", "Tailwind CSS", "Responsive Design"],
             color: "orange",
             shadow: "shadow-orange-400",
@@ -72,59 +74,50 @@ function BodySection() {
             featured: true
         },
         {
-            title: "Car Dealer's Portfolio",
+            title: "Delaw Car Autos Portfolio",
             description: "A car dealer's portfolio website built for a business in Abuja, Nigeria. Features direct contact integration and comprehensive service showcasing.",
             type: "image",
             src: "/IMAGES/Delaw-Car-Autos-Portfolio-1.png",
             link: "https://delaw-car-autos.netlify.app/",
-            tech: ["React", "Tailwind CSS", "Contact Integration"],
+            github: "https://github.com/bdevc224/delaw-car-autos-website", // Add your GitHub link
+            tech: ["React", "Tailwind CSS", "TypeScript", "Ai", "Contact Integration"],
             color: "red",
             shadow: "shadow-red-500",
             textColor: "text-red-500",
             featured: true
         },
         {
-            title: "My Diary Website",
-            description: "A personal diary application for storing and organizing thoughts, memories, and daily entries with a clean, intuitive interface.",
-            type: "text", // Using text type for internal projects
-            src: "",
-            link: "/mydiaryapp",
-            tech: ["React", "Local Storage", "CRUD Operations"],
-            color: "cyan",
-            shadow: "shadow-cyan-300",
-            textColor: "text-cyan-300",
-            featured: false
+            title: "BC Autos Portfolio",
+            description: "A car dealer's portfolio website built for a business in Enugu and Abuja, Nigeria. Features direct contact integration and comprehensive service showcasing.",
+            type: "image",
+            src: "/IMAGES/bc-autos-website.png",
+            link: "https://bc-autos-website.netlify.app/",
+            github: "https://github.com/bdevc224/bc-autos-website", // Add your GitHub link
+            tech: ["React", "Tailwind CSS", "TypeScript", "Ai", "Contact Integration"],
+            color: "blue",
+            shadow: "shadow-blue-500",
+            textColor: "text-blue-500",
+            featured: true
         },
-        {
-            title: "Multi-player Truth or Dare Game",
-            description: "An interactive multiplayer game with customizable options and real-time gameplay features for friends and family.",
-            type: "text", // Using text type for internal projects
-            src: "",
-            link: "/truthordareapp",
-            tech: ["React", "Game Logic", "Multiplayer"],
-            color: "cyan",
-            shadow: "shadow-cyan-300",
-            textColor: "text-cyan-300",
-            featured: false
-        },
-        {
-            title: "Love Triangle Calculator",
-            description: "A fun and engaging love compatibility calculator with beautiful animations and interactive elements.",
-            type: "text", // Using text type for internal projects
-            src: "",
-            link: "/lovetriangle",
-            tech: ["React", "Animations", "Interactive UI"],
-            color: "pink",
-            shadow: "shadow-pink-400",
-            textColor: "text-pink-400",
-            featured: false
-        }
     ];
 
     return (
         <div className="bg-linear-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
                 
+                {/* GitHub Section Header */}
+                <FadeInWhenVisible>
+                    <div className="text-center mb-12 sm:mb-16">
+                        <div className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full mb-4">
+                            <Github className="w-6 h-6" />
+                            <span className="font-semibold">View My Code on GitHub</span>
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-300 text-lg">
+                            Each project includes a link to its source code. Click the <Code className="inline w-5 h-5" /> button to explore!
+                        </p>
+                    </div>
+                </FadeInWhenVisible>
+
                 {/* Featured Projects */}
                 <FadeInWhenVisible>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-center mb-12 sm:mb-16 text-gray-900 dark:text-white">
@@ -142,10 +135,9 @@ function BodySection() {
                                         type={project.type}
                                         src={project.type === "text" ? "" : project.src}
                                         text={project.type === "text" ? project.title : undefined}
-                                        bgColor={project.type === "text" ? "#1e40af" : undefined} // Blue background for text portals
+                                        bgColor={project.type === "text" ? "#1e40af" : undefined}
                                         textColor={project.type === "text" ? "#ffffff" : undefined}
                                         link={project.link}
-                                        
                                     />
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                         <div className="flex gap-4">
@@ -154,23 +146,39 @@ function BodySection() {
                                                 target={project.link.startsWith('http') ? '_blank' : undefined}
                                                 rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                                                 className="bg-white/90 text-gray-900 p-3 rounded-full hover:bg-white transition-all transform hover:scale-110"
+                                                title="View Live Demo"
                                             >
                                                 <ExternalLink size={20} />
                                             </a>
-                                            {project.type === 'video' && (
-                                                <button className="bg-white/90 text-gray-900 p-3 rounded-full hover:bg-white transition-all transform hover:scale-110">
-                                                    <Play size={20} />
-                                                </button>
-                                            )}
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-white/90 text-gray-900 p-3 rounded-full hover:bg-white transition-all transform hover:scale-110"
+                                                title="View Source Code on GitHub"
+                                            >
+                                                <Github size={20} />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Project Content */}
                                 <div className="p-6 sm:p-8">
-                                    <h3 className={`text-2xl sm:text-3xl font-heading font-bold mb-4 ${project.textColor}`}>
-                                        {project.title}
-                                    </h3>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h3 className={`text-2xl sm:text-3xl font-heading font-bold ${project.textColor}`}>
+                                            {project.title}
+                                        </h3>
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-400 hover:text-white transition-colors"
+                                            title="Star on GitHub"
+                                        >
+                                            <Star size={18} className="hover:fill-yellow-400" />
+                                        </a>
+                                    </div>
                                     
                                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
                                         {project.description}
@@ -194,15 +202,33 @@ function BodySection() {
                                             href={project.link}
                                             target={project.link.startsWith('http') ? '_blank' : undefined}
                                             rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                            className="flex items-center gap-2 bg-white text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition-all font-semibold text-sm sm:text-base"
+                                            className="flex items-center gap-2 bg-white text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition-all font-semibold text-sm sm:text-base flex-1 justify-center"
                                         >
                                             <ExternalLink size={16} />
                                             Live Demo
                                         </a>
-                                        <button className="flex items-center gap-2 border border-gray-600 text-gray-300 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-all text-sm sm:text-base">
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 bg-gray-800 border border-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-700 transition-all font-semibold text-sm sm:text-base flex-1 justify-center"
+                                        >
                                             <Github size={16} />
-                                            Code
-                                        </button>
+                                            View Code
+                                        </a>
+                                    </div>
+
+                                    {/* GitHub Link */}
+                                    <div className="mt-4 pt-4 border-t border-gray-800">
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors"
+                                        >
+                                            <Code size={14} />
+                                            <span>Browse source code on GitHub</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -210,18 +236,34 @@ function BodySection() {
                     ))}
                 </div>
 
-                {/* Other Projects */}
+                {/* GitHub Profile CTA */}
                 <FadeInWhenVisible>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-white">
-                        Other Projects
-                    </h2>
-
-                    <p className=" text-lg mb-6 max-w-2xl mx-auto">
-                        Future projects will appear here.
-                    </p>
+                    <div className="bg-linear-to-r from-gray-900 to-black rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-white mb-12 sm:mb-16">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div className="text-center md:text-left">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <Github className="w-8 h-8" />
+                                    <h3 className="text-2xl font-heading font-bold">More Projects on GitHub</h3>
+                                </div>
+                                <p className="text-gray-300 mb-4">
+                                    Explore all my repositories, contributions, and open-source work.
+                                </p>
+                                <div className="flex items-center gap-2 text-gray-400">
+                                    <Star className="w-4 h-4" />
+                                    <span>Star my repositories to show support!</span>
+                                </div>
+                            </div>
+                            <a
+                                href="https://github.com/bdevc224"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base shadow-lg hover:shadow-xl whitespace-nowrap"
+                            >
+                                Visit My GitHub
+                            </a>
+                        </div>
+                    </div>
                 </FadeInWhenVisible>
-
-                
 
                 {/* Call to Action */}
                 <FadeInWhenVisible>
@@ -261,6 +303,6 @@ export default function MyProjects() {
             <HeaderSection />
             <BodySection />
             <Footer />
-    </div>
+        </div>
     );
 }
