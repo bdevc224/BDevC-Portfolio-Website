@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaCode, FaPalette, FaRocket } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaCode, FaPalette, FaRocket, FaWhatsapp } from "react-icons/fa";
 import { type IconType } from "react-icons";
 import Footer from "../components/Footer";
 import FadeInWhenVisible from "../components/FadeInWhenVisible";
@@ -155,7 +155,8 @@ function ContactForm() {
     { Icon: FaEnvelope, text: "bdevc224@gmail.com", href: "mailto:bdevc224@gmail.com" },
     { Icon: FaLinkedin, text: "LinkedIn Profile", href: "https://www.linkedin.com/in/b-dev-c-585a34307" },
     { Icon: FaGithub, text: "GitHub Profile", href: "https://github.com/bdevc224" },
-    { Icon: FaPhone, text: "+234 916 622 6690", href: "tel:+2349166226690" }
+    { Icon: FaPhone, text: "+234 916 622 6690", href: "tel:+2349166226690" },
+    { Icon: FaWhatsapp, text: "My Whatsapp", href: "https://wa.me/2349166226690" }
   ];
 
   return (

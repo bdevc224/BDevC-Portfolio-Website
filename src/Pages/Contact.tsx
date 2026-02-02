@@ -1,4 +1,4 @@
-import { FaLocationPin, FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa6";
+import { FaLocationPin, FaEnvelope, FaLinkedin, FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { type IconType } from "react-icons";
 import BackgroundImage from "../components/BackgroundImage";
@@ -105,8 +105,15 @@ function BodySection() {
       icon: FaLocationPin,
       label: "Location",
       value: "Remote Developer - Available Worldwide (Based in Nigeria)",
-      href: null,
+      href: "https://maps.app.goo.gl/RqFHV5p7p5ffmoAu9?g_st=ic",
       color: "hover:text-purple-400"
+    },
+    {
+      icon: FaWhatsapp,
+      label: "WhatsApp",
+      value: "Contact me through WhatsApp",
+      href: "https://wa.me/2349166226690",
+      color: "hover:text-green-500"
     }
   ];
 

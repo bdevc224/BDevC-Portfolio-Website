@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { type IconType } from "react-icons";
 
@@ -23,6 +23,7 @@ function Hero() {
     { Icon: FaInstagram, href: "https://www.instagram.com/b_dev.c?igsh=ZXQ1azZrNWU2Nzls", label: "Instagram", color: "hover:text-orange-400" },
     { Icon: FaXTwitter, href: "https://x.com/b_devc26?s=21", label: "XTwitter", color: "hover:text-blue-400" },
     { Icon: FaGithub, href: "https://github.com/bdevc224", label: "Github", color: "hover:text-blue-400" },
+    { Icon: FaWhatsapp, href: "https://wa.me/2349166226690", label: "WhatsApp", color: "hover:text-green-500" },
     { Icon: FaPhone, href: "tel:+2349166226690", label: "Mobile Phone", color: "hover:text-green-400" }
   ];
 
@@ -55,9 +56,9 @@ function Hero() {
             And I'm a <span className="text-red-500">front-end web developer</span> 
           </p>
           
-          <p className="text-start pb-3 sm:pb-4 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
-            Hi 👋 I'm BDev.c a front-end web designer and developer. 
-            I specialize in curating <span className="text-pink-500 font-bold">unique</span> UI/UX tailored to your specific needs. 
+          <p className="text-start pr-5 pb-3 sm:pb-4 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl">
+            Hi 👋 I'm BDev.c a front-end web designer and developer. <br />
+            I specialize in curating <span className="text-pink-500 font-bold">unique</span> UI/UX tailored to your specific needs. <br /> 
             I work with HTML, CSS, JavaScript, React JS, Tailwind CSS and TypeScript.
           </p>
         </FadeInWhenVisibleLeft>

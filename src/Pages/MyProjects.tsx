@@ -4,7 +4,7 @@ import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import FadeInWhenVisibleRight from "../components/FadeInWhenVisibleRight";
 import FadeInWhenVisibleLeft from "../components/FadeInWhenVisibleLeft";
 import Footer from "../components/Footer";
-import { ExternalLink, Github, Play, Code, Star } from "lucide-react";
+import { ExternalLink, Github, Code, Star } from "lucide-react";
 
 // Define the type based on what ZoomPortal expects
 type ProjectType = "image" | "video" | "text";
@@ -59,6 +59,8 @@ function HeaderSection() {
 }
 
 function BodySection() {
+    // Projects
+
     const projects: Project[] = [
         {
             title: "Real Estate Landing Page",
@@ -67,7 +69,7 @@ function BodySection() {
             src: "/VIDEOS/my-website.MOV",
             link: "https://my-react-tailwind-landing-page.netlify.app/",
             github: "https://github.com/bdevc224/my-react-tailwind-project", // Add your GitHub link
-            tech: ["React", "Tailwind CSS", "Responsive Design"],
+            tech: ["React", "Tailwind CSS", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "orange",
             shadow: "shadow-orange-400",
             textColor: "text-orange-400",
@@ -80,7 +82,7 @@ function BodySection() {
             src: "/IMAGES/Delaw-Car-Autos-Portfolio-1.png",
             link: "https://delaw-car-autos.netlify.app/",
             github: "https://github.com/bdevc224/delaw-car-autos-website", // Add your GitHub link
-            tech: ["React", "Tailwind CSS", "TypeScript", "Ai", "Contact Integration"],
+            tech: ["React", "Tailwind CSS", "TypeScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "red",
             shadow: "shadow-red-500",
             textColor: "text-red-500",
@@ -93,10 +95,23 @@ function BodySection() {
             src: "/IMAGES/bc-autos-website.png",
             link: "https://bc-autos-website.netlify.app/",
             github: "https://github.com/bdevc224/bc-autos-website", // Add your GitHub link
-            tech: ["React", "Tailwind CSS", "TypeScript", "Ai", "Contact Integration"],
+            tech: ["React", "Tailwind CSS", "TypeScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "blue",
             shadow: "shadow-blue-500",
             textColor: "text-blue-500",
+            featured: true
+        },
+        {
+            title: "BC Travel Tour & Vacation",
+            description: "This is a personal project based on a company focused on travels, tours, and vacation businesses all over the world.",
+            type: "image",
+            src: "/IMAGES/bc-ttv.png",
+            link: "https://bc-travel-tour-vacation-web.netlify.app/",
+            github: "https://github.com/bdevc224/bc-travel-tour-vacation-web", // Add your GitHub link
+            tech: ["HTML", "CSS", "JavaScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
+            color: "orange",
+            shadow: "shadow-orange-300",
+            textColor: "text-orange-300",
             featured: true
         },
     ];
