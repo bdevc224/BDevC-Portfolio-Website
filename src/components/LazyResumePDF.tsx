@@ -19,7 +19,7 @@ const LazyResumePDF: React.FC<LazyResumePDFProps> = () => {
       {!showDownload ? (
         <button
           onClick={() => setShowDownload(true)}
-          className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
+          className="bg-linear-to-r bg-red-900 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
         >
           📄 Download Resume as PDF
         </button>

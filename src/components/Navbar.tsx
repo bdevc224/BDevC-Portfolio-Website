@@ -18,7 +18,7 @@ const DarkModeToggle = lazy(() => import("./DarkModeToggle"));
 // Loading component for suspense fallback
 const PageLoader: React.FC = () => (
   <div className="flex justify-center items-center min-h-[60vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-900"></div>
   </div>
 );
 
@@ -83,7 +83,7 @@ const MobileMenuIcon: React.FC<MobileMenuIconProps> = ({ isOpen, onClick }) => {
 const ChatButton: React.FC<{ onClick: () => void; isMobile?: boolean }> = ({ onClick, isMobile }) => (
   <button
     onClick={onClick}
-    className={`bg-blue-600 hover:bg-blue-700 transition text-sm rounded-md ${
+    className={`bg-red-700 hover:bg-red-900 transition text-sm rounded-md cursor-pointer ${
       isMobile ? 'px-3 py-1' : 'px-4 py-2'
     }`}
   >

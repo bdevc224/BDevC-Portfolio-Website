@@ -212,7 +212,7 @@ export default function Footer() {
             exit={{ opacity: 0, scale: 0, y: 20 }}
             transition={{ duration: 0.3 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 bg-red-800 hover:bg-red-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
             aria-label="Scroll to top"
           >
             <ChevronUp size={isMobile ? 20 : 24} />

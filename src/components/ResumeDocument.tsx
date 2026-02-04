@@ -32,7 +32,7 @@ const ResumeDocument: React.FC = () => (
     <Page size="A4" style={styles.page}>
       {/* Header Section */}
       <View style={styles.section}>
-        <Text style={styles.header}>BDev.C</Text>
+        <Text style={styles.header}>Ikeagwuonu Chinemerem Benedict (BDevC)</Text>
         <Text style={styles.text}>Frontend Web Developer</Text>
         <Text style={styles.text}>
           bdevc224@gmail.com | +234 916 622 6690 | Remote Developer (Based in Nigeria)
@@ -89,17 +89,26 @@ const ResumeDocument: React.FC = () => (
         <Text style={styles.text}>- Integrated interactive chatbot assistant</Text>
         
         <Text style={styles.text}>Real Estate Landing Page</Text>
+        <Text style={styles.text}>- Built with React and Tailwind CSS</Text>
         <Text style={styles.text}>- Modern landing page for real estate businesses</Text>
         <Text style={styles.text}>- Responsive design with optimized performance</Text>
         
-        <Text style={styles.text}>Responsive Car Dealer's Portfolio Website</Text>
+        <Text style={styles.text}>Responsive Car Dealer's Portfolio Websites</Text>
+        <Text style={styles.text}>- Built with React, TypeScript, and Tailwind CSS</Text>
         <Text style={styles.text}>- Modern Car dealer's portfolio website based in Abuja Nigeria</Text>
         <Text style={styles.text}>- Easy communication with the car dealer and engaging user interfaces</Text>
+
+        <Text style={styles.text}>Responsive Travels, Tours & Vacation Website</Text>
+        <Text style={styles.text}>- Built with HTML, CSS, and JavaScript</Text>
+        <Text style={styles.text}>- Modern project based on a company focused on travels, tours, and vacation businesses all over the world</Text>
+        <Text style={styles.text}>- Easy communication with the company and engaging user interfaces</Text>
       </View>
 
       {/* Education Section */}
       <View style={styles.section}>
         <Text style={styles.subHeader}>Education & Certifications</Text>
+        <Text style={styles.text}>Graduate - Bachelor of Engineering (B.Eng) Degree in Civil Engineering at the Enugu State University of Science and Technology, Enugu State Nigeria.</Text>
+
         <Text style={styles.text}>Self-Taught Developer - Online Courses & Practical Projects (2019 - Present)</Text>
         <Text style={styles.text}>- React.js, JavaScript, and modern web development</Text>
         <Text style={styles.text}>- Responsive design and web performance optimization</Text>

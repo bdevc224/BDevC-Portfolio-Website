@@ -54,18 +54,34 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
     {
       id: 1,
       name: "Real Estate Landing Page",
-      img: "/projects/landing.png",
+      img: "/IMAGES/bc-homes.png",
       description:
         "A set of clean and creative real estate landing page made with React-Tailwind for startups and SaaS.",
       link: "https://my-react-tailwind-landing-page.netlify.app/",
     },
     {
       id: 2,
-      name: "Car Dealer's Portfolio",
-      img: "/projects/portfolio.png",
+      name: "Delaw Autos A Car Dealer's Portfolio",
+      img: "/IMAGES/Delaw-Car-Autos-Portfolio-1.png",
       description:
         "A unique and responsive car dealer's portfolio website, built with React and Tailwind showcasing frontend genuineness, simplicity and creativity.",
-      link: "/lovetriangle",
+      link: "https://delaw-car-autos.netlify.app/",
+    },
+    {
+      id: 3,
+      name: "BC Autos A Car Dealer's Portfolio",
+      img: "/IMAGES/bc-autos-website.png",
+      description:
+        "A unique and responsive car dealer's portfolio website, built with React, Tailwind and TypeScript showcasing frontend genuineness, simplicity and creativity.",
+      link: "https://bc-autos-website.netlify.app/",
+    }, 
+    {
+      id: 4,
+      name: "BC Travel Tour & Vacation",
+      img: "/IMAGES/bc-ttv.png",
+      description:
+        "This is a personal project based on a company focused on travels, tours, and vacation businesses all over the world. Built with HTML, CSS and JavaScript showcasing frontend genuineness, simplicity and creativity.",
+      link: "https://bc-travel-tour-vacation-web.netlify.app/",
     },
     
   ];
@@ -99,7 +115,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
         replyType = "projects";
       } else if (lowerContent.includes("skill")) {
         reply =
-          "🧠 I'm skilled in React.js, Tailwind CSS, JavaScript (ES6+), HTML5, CSS3, Git/GitHub, and ChatGPT API integration. Also experienced in responsive design and mobile-first development.";
+          "🧠 I'm skilled in React.js, Tailwind CSS, JavaScript (ES6+), HTML5, CSS3, Git/GitHub,ChatGPT API integration and Ai Integrated Designs like this Chatbot. Also experienced in responsive design and mobile-first development.";
       } else if (lowerContent.includes("contact")) {
         reply =
           "📬 You can reach BDev.C via:\n• Email: bdevc224@gmail.com\n• GitHub: github.com/bdevc224\n• Mobile: +2349166226690";
@@ -195,7 +211,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header - Mobile Optimized */}
-          <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-blue-600 text-white">
+          <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-red-900 text-white">
             <div className="flex items-center gap-2 md:gap-3">
               <Bot className="w-5 h-5 md:w-6 md:h-6" />
               <div>
@@ -242,7 +258,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
                           />
                           <div className="flex-1 flex flex-col justify-between min-w-0">
                             <div className="flex-1">
-                              <h3 className="font-semibold text-blue-600 dark:text-blue-400 text-sm md:text-base mb-1">
+                              <h3 className="font-semibold text-red-900 dark:text-red-900 text-sm md:text-base mb-1">
                                 {p.name}
                               </h3>
                               <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed">
@@ -253,7 +269,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
                               href={p.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs md:text-sm mt-2 md:mt-3 text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                              className="inline-flex items-center gap-1 text-xs md:text-sm mt-2 md:mt-3 text-red-900 dark:text-red-900 hover:underline font-medium"
                             >
                               <ExternalLink size={isMobile ? 12 : 14} />
                               View Project
@@ -278,7 +294,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
                       whileHover={{ scale: 1.02 }}
                       className={`p-3 md:p-4 rounded-2xl max-w-[85%] md:max-w-[80%] text-sm md:text-base ${
                         msg.role === "user"
-                          ? "bg-blue-600 text-white rounded-br-md"
+                          ? "bg-red-900 text-white rounded-br-md"
                           : "bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 rounded-bl-md shadow-sm border border-gray-200 dark:border-gray-600"
                       }`}
                     >
@@ -324,7 +340,7 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => sendMessage(btn.text)}
-                className="px-3 py-2 text-xs md:text-sm rounded-full bg-white hover:bg-blue-600 hover:text-white transition-all dark:bg-gray-700 dark:hover:bg-blue-500 shadow-sm border border-gray-200 dark:border-gray-600 font-medium"
+                className="px-3 py-2 text-xs md:text-sm rounded-full bg-white hover:bg-red-900 hover:text-white transition-all dark:bg-gray-700 dark:hover:bg-red-900 shadow-sm border border-gray-200 dark:border-gray-600 font-medium"
               >
                 {btn.label}
               </motion.button>
@@ -341,14 +357,14 @@ const MyPortfolioChatbot: React.FC<MyPortfolioChatbotProps> = ({ onClose }) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1 p-3 md:p-4 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base border border-transparent focus:border-blue-500 transition"
+              className="flex-1 p-3 md:p-4 rounded-xl bg-gray-100 dark:bg-gray-800 outline-none focus:ring-2 focus:ring-red-900 text-sm md:text-base border border-transparent focus:border-red-900 transition"
             />
             <motion.button
               type="submit"
               disabled={loading || !input.trim()}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white p-3 md:p-4 rounded-xl hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-11 min-h-11"
+              className="bg-red-900 text-white p-3 md:p-4 rounded-xl hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-11 min-h-11"
               aria-label="Send message"
             >
               <Send size={isMobile ? 18 : 20} />

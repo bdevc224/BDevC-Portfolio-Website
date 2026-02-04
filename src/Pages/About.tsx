@@ -94,7 +94,7 @@ function BodySection() {
           <FadeInWhenVisible>
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-loose">
               <p>
-                I am a frontend web developer and video editor from Nigeria. I build unique web experiences 
+                I am Ikeagwuonu Chinemerem Benedict (BDevC), a frontend web developer and video editor from Nigeria. I build unique web experiences 
                 using technologies like HTML, CSS, JavaScript, and frameworks like React JS & Tailwind CSS.
               </p>
               
@@ -108,6 +108,11 @@ function BodySection() {
                 With my creativity and tech stack expertise, I implement animations, transition effects, 
                 language toggles, and other integrations to give websites an elite look based on client 
                 preferences. Most importantly, I provide a peaceful and awesome user experience.
+              </p>
+
+              <p>
+                I am a graduate with a Bachelor Of Engineering (B.Eng) Degree in Civil Engineering at the
+                Enugu State University of Science and Technology, Enugu State Nigeria.
               </p>
               
               <p className="font-semibold text-red-500 dark:text-red-400">

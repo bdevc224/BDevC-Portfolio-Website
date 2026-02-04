@@ -68,7 +68,7 @@ function BodySection() {
             type: "video",
             src: "/VIDEOS/my-website.MOV",
             link: "https://my-react-tailwind-landing-page.netlify.app/",
-            github: "https://github.com/bdevc224/my-react-tailwind-project", // Add your GitHub link
+            github: "https://github.com/bdevc224/my-react-tailwind-project",
             tech: ["React", "Tailwind CSS", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "orange",
             shadow: "shadow-orange-400",
@@ -81,7 +81,7 @@ function BodySection() {
             type: "image",
             src: "/IMAGES/Delaw-Car-Autos-Portfolio-1.png",
             link: "https://delaw-car-autos.netlify.app/",
-            github: "https://github.com/bdevc224/delaw-car-autos-website", // Add your GitHub link
+            github: "https://github.com/bdevc224/delaw-car-autos-website",
             tech: ["React", "Tailwind CSS", "TypeScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "red",
             shadow: "shadow-red-500",
@@ -94,7 +94,7 @@ function BodySection() {
             type: "image",
             src: "/IMAGES/bc-autos-website.png",
             link: "https://bc-autos-website.netlify.app/",
-            github: "https://github.com/bdevc224/bc-autos-website", // Add your GitHub link
+            github: "https://github.com/bdevc224/bc-autos-website",
             tech: ["React", "Tailwind CSS", "TypeScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "blue",
             shadow: "shadow-blue-500",
@@ -107,7 +107,7 @@ function BodySection() {
             type: "image",
             src: "/IMAGES/bc-ttv.png",
             link: "https://bc-travel-tour-vacation-web.netlify.app/",
-            github: "https://github.com/bdevc224/bc-travel-tour-vacation-web", // Add your GitHub link
+            github: "https://github.com/bdevc224/bc-travel-tour-vacation-web",
             tech: ["HTML", "CSS", "JavaScript", "Contact Integration", "Responsive Design", "Problem Solving", "Creativity" ],
             color: "orange",
             shadow: "shadow-orange-300",

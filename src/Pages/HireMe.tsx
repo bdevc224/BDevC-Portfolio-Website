@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import FadeInWhenVisibleLeft from "../components/FadeInWhenVisibleLeft";
 import FadeInWhenVisibleRight from "../components/FadeInWhenVisibleRight";
-import LazyResumePDF from "../components/LazyResumePDF"; // Updated import
+import LazyResumePDF from "../components/LazyResumePDF";
 
 interface Stat {
   number: string;
@@ -39,10 +39,10 @@ function HeroSection() {
         <FadeInWhenVisible>
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-4 sm:mb-6">
-              Let's Work Together <span className="text-blue-500">🚀</span>
+              Let's Work Together
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-              I'm a passionate <span className="text-blue-600 dark:text-blue-400 font-semibold">Frontend Developer</span>  
+              I'm a passionate <span className="text-red-800 dark:text-red-600 font-semibold">Frontend Developer </span>  
               who loves building beautiful, fast, and accessible web experiences. 
               If you're looking for someone to bring your ideas to life — I'm your person.
             </p>
@@ -51,7 +51,7 @@ function HeroSection() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex flex-col sm:flex-row items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 cursor-pointer"
+              className="inline-flex flex-col sm:flex-row items-center gap-3 bg-red-900 hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 cursor-pointer"
             >
               
               <LazyResumePDF />
@@ -67,7 +67,7 @@ function HeroSection() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm"
                 >
-                  <div className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  <div className="text-xl sm:text-2xl font-bold text-red-800 dark:text-red-600">
                     {stat.number}
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
@@ -121,7 +121,7 @@ function ServiceSection() {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col"
               >
-                <div className="text-blue-500 dark:text-blue-400 mb-4 sm:mb-6">
+                <div className="text-red-800 dark:text-red-600 mb-4 sm:mb-6">
                   <service.icon className="text-3xl sm:text-4xl" />
                 </div>
                 
@@ -136,7 +136,7 @@ function ServiceSection() {
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-sm sm:text-base">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full shrink-0" />
+                      <div className="w-2 h-2 bg-red-600 rounded-full shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                     </div>
                   ))}
@@ -167,8 +167,8 @@ function ContactForm() {
           {/* Contact Form */}
           <FadeInWhenVisibleLeft>
             <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-200 dark:border-gray-700">
-              <h2 className="text-2xl sm:text-3xl font-heading font-semibold mb-6 sm:mb-8 text-center text-blue-600 dark:text-blue-400">
-                Send Me a Message 💬
+              <h2 className="text-2xl sm:text-3xl font-heading font-semibold mb-6 sm:mb-8 text-center text-red-800 dark:text-red-600">
+                Send Me a Message
               </h2>
               
               <form
@@ -222,7 +222,7 @@ function ContactForm() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 text-sm sm:text-base"
+                  className="w-full bg-red-800 hover:bg-red-700 text-white py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/30 text-sm sm:text-base"
                 >
                   Send Message
                 </motion.button>
@@ -236,8 +236,8 @@ function ContactForm() {
 
           {/* Contact Information */}
           <FadeInWhenVisibleRight>
-            <div className="bg-linear-to-br from-blue-500 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl">
-              <h3 className="text-xl sm:text-2xl font-heading font-semibold mb-6 sm:mb-8 text-center">
+            <div className="bg-linear-to-br rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl shadow-gray-700">
+              <h3 className="text-red-800 dark:text-red-600 text-xl sm:text-2xl font-heading font-semibold mb-6 sm:mb-8 text-center">
                 Let's Connect
               </h3>
               
@@ -251,7 +251,7 @@ function ContactForm() {
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-4 p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-3 bg-white/10 rounded-xl hover:bg-red-800 transition-all duration-300 group"
                   >
                     <contact.Icon className="text-lg sm:text-xl shrink-0" />
                     <span className="text-sm sm:text-base group-hover:underline">{contact.text}</span>
@@ -261,7 +261,7 @@ function ContactForm() {
 
               <div className="text-center">
                 <p className="text-blue-100 text-sm sm:text-base mb-4">
-                  💫 Available for freelance projects and full-time opportunities
+                  Available for freelance projects and full-time opportunities
                 </p>
                 <p className="text-blue-200 text-xs sm:text-sm">
                   Remote work • Worldwide collaboration • Quick response time
